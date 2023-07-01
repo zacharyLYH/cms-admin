@@ -37,7 +37,7 @@ export const StoreModal = () => {
             setLoading(true);
             const response = await axios.post("/api/stores", values);
             console.log(response.data);
-            toast.success("Created!");
+            window.location.assign(`${response.data.id}`); //do this instead of redirect to allow a full db posting before redirecting. otherwise data not in sync
         } catch (err) {
             toast.error("Something went wrong");
         } finally {
