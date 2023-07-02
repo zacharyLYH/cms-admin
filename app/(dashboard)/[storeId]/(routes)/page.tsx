@@ -22,7 +22,7 @@ const DashboardPage: React.FC<DashboardProps> = async ({ params }) => {
     if (!store) {
         redirect("/");
     }
-    return <div>This is a dashboard</div>;
+    return <div>Active store: {store?.name}</div>;
 };
 
 export default DashboardPage;
