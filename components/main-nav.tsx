@@ -12,6 +12,11 @@ export function MainNav({
     const params = useParams();
     const routes = [
         {
+            href: `/${params.storeId}`,
+            label: "Overview",
+            active: pathName === `/${params.storeId}/overview`,
+        },
+        {
             href: `/${params.storeId}/settings`, //we can use storeId because this component is going inside [storeId]
             label: "Settings",
             active: pathName === `/${params.storeId}/settings`,
@@ -19,7 +24,10 @@ export function MainNav({
     ];
     return (
         <nav
-            className={cn("flex items-center space-4 lg:space-x-6", className)}
+            className={cn(
+                "flex items-center space-x-4 lg:space-x-6",
+                className
+            )}
         >
             {routes.map((route) => (
                 <Link
