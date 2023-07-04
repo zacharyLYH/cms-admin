@@ -27,9 +27,14 @@ export function MainNav({
             active: pathName === `/${params.storeId}/categories`,
         },
         {
-            href: `/${params.storeId}/sizes`, //we can use storeId because this component is going inside [storeId]
+            href: `/${params.storeId}/sizes`,
             label: "Sizes",
             active: pathName === `/${params.storeId}/sizes`,
+        },
+        {
+            href: `/${params.storeId}/colors`,
+            label: "Colors",
+            active: pathName === `/${params.storeId}/colors`,
         },
         {
             href: `/${params.storeId}/settings`, //we can use storeId because this component is going inside [storeId]
