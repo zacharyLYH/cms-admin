@@ -17,11 +17,6 @@ export function MainNav({
             active: pathName === `/${params.storeId}/overview`,
         },
         {
-            href: `/${params.storeId}/settings`, //we can use storeId because this component is going inside [storeId]
-            label: "Settings",
-            active: pathName === `/${params.storeId}/settings`,
-        },
-        {
             href: `/${params.storeId}/billboards`,
             label: "Billboards",
             active: pathName === `/${params.storeId}/billboards`,
@@ -30,6 +25,16 @@ export function MainNav({
             href: `/${params.storeId}/categories`,
             label: "Categories",
             active: pathName === `/${params.storeId}/categories`,
+        },
+        {
+            href: `/${params.storeId}/sizes`, //we can use storeId because this component is going inside [storeId]
+            label: "Sizes",
+            active: pathName === `/${params.storeId}/sizes`,
+        },
+        {
+            href: `/${params.storeId}/settings`, //we can use storeId because this component is going inside [storeId]
+            label: "Settings",
+            active: pathName === `/${params.storeId}/settings`,
         },
     ];
     return (
